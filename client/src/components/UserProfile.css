@@ -1,0 +1,16 @@
+.gallery{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:space-around;
+    object-fit: contain;
+}
+
+/* justify-content:space-around*/
+.item{
+    width:31%;
+    margin: 4px auto;
+    /*padding: 4px auto;
+    margin:2px;
+    height:120px;*/
+    
+}

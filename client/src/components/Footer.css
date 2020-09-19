@@ -1,0 +1,14 @@
+.footer{
+    width:100%;
+    bottom:0;
+    position:fixed;
+    text-align: center;
+    color: black;
+    font-size: 16px;
+    background-color: #ED4C67;
+    height: 35px;
+    padding-top:5px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    box-shadow: 4px 0px 1px 1px rgba(0,0,0,0.5);
+    font-weight: bold;
+}

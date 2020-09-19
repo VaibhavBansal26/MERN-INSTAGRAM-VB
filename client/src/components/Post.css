@@ -1,0 +1,30 @@
+.post{
+    display: grid !important;
+    place-items: center !important;
+    margin: 100px auto!important;
+    padding: 0px 10px;
+}
+
+
+.brand-logo{
+    font-family: 'Grand Hotel', cursive;
+}
+
+.logo{
+    border-radius: 100%;
+    margin-top: -65px;
+    height: 100px;
+    object-fit: contain;
+   
+}
+
+.card > button {
+    margin-top: 5px;
+    background-color: #ED4C67 !important;
+}
+
+.card > input:focus{
+    border-bottom: 1px solid #ED4C67 !important;
+    width: 100%;
+
+}

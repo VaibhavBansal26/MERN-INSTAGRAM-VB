@@ -1,0 +1,53 @@
+
+a{
+    color: black !important;
+}
+
+.nav-wrapper{
+    display: flex !important;
+    align-items:center !important;
+    background-color: white !important;
+    padding: 40x 5px !important;
+    justify-content: space-between !important;
+  
+}
+
+.bar{
+    display: flex;
+    align-items: center;
+    font-size: 12px !important;
+    
+}
+
+.brand-logo-left > img{
+    width:50px;
+    height:50px;
+    object-fit: contain;
+}
+
+.brand-logo-left{
+    display: flex;
+    align-items: flex-end; 
+}
+
+
+
+.headerRight{
+    display: flex;
+    align-items: center;
+    padding: 1px;
+    justify-content: space-around;
+    color: black;
+    
+}
+
+
+
+.headerRight__logo{
+    font-family: 'Grand Hotel', cursive;
+    font-size: 24px !important;
+}
+
+
+
+

@@ -1,0 +1,108 @@
+.profile__Header{
+    display: flex;
+    margin-top: 25px;
+}
+
+.profile__Left{
+    flex: 0.3;
+    display: grid;
+    place-items:flex-end;
+    
+    
+}
+
+.profile{
+    max-width: 760px;
+    margin:0px auto;
+}
+
+.profile__Left > img {
+    width:120px;
+    height:120px;
+    border-radius: 100%;
+    object-fit: contain;
+    border: 1px solid black;
+    flex: 1;
+    padding: 4px;
+    top: 0px;
+}
+
+.profile__Right{
+    flex:0.70;  
+}
+
+.profile__details{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding-left: 10px;
+    text-align: center;
+    margin-top: 15px;
+}
+
+.profile__detA{
+    flex:0.15;
+}
+.profile__det{
+    flex:0.2;
+    font-size: 18px;
+    padding: 0px 3px;
+    
+}
+.profile__detF{
+    flex:0.20;
+}
+
+.profile__name{
+    margin-left: 33px;
+    font-size: 21px;
+   
+}
+.profile__about{
+    display: flex;
+    padding: 3px;
+}
+
+.about__one{
+    flex:0.3;
+}
+.about__two{
+    flex:0.7;
+    margin-left: 15px;
+}
+
+
+.profile__gallery{
+    display: flex;
+    flex-wrap: wrap;
+}
+/*
+.gallery__one{
+    flex:0.2;
+}
+
+.galler__two{
+    flex:0.2;
+}
+*/
+.item{
+    width:33%;
+    object-fit: contain;
+}
+
+.profile__stories{
+    display: flex;
+    overflow-x: scroll;
+}
+.story{
+    border-radius: 100%;
+    width: 90px;
+    height: 90px;
+    border:3px solid #ED4C67;
+    padding: 0 2px;
+    margin: 0px 5px;
+    object-fit: contain;
+}
+
+
