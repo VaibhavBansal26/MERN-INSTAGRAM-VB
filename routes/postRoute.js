@@ -32,7 +32,7 @@ router.post('/createpost',reqLogin,(req,res) => {
 
 //2.Get all posts
 router.get('/allpost',reqLogin,(req,res) => {
-    Post.find().populate("postedBy","_id name photo").populate("comments.postedBy","_id name photo")
+    Post.find().populate("postedBy","_id name photo").populate("comments.postedBy","_id name photo").sort("-createdAt")
     .then(posts => {
         res.status(200).json({posts})
     }).catch(err => {
@@ -43,7 +43,7 @@ router.get('/allpost',reqLogin,(req,res) => {
 //3.Get all post by user
 router.get('/mypost',reqLogin,(req,res) => {
     Post.find({"postedBy":req.user._id})
-    .populate("postedBy","_id name photo")
+    .populate("postedBy","_id name photo").sort("-createdAt")
     .then(myPost => {
         res.json({myPost})
     }).catch(err =>{
@@ -139,7 +139,7 @@ router.delete('/deleteComment/:postId/:commentId',reqLogin,(req,res) => {
 
 
 router.get('/getsubpost',reqLogin,(req,res) => {
-    Post.find({postedBy:{$in:req.user.following}}).populate("postedBy","_id name photo").populate("comments.postedBy","_id name photo")
+    Post.find({postedBy:{$in:req.user.following}}).populate("postedBy","_id name photo").populate("comments.postedBy","_id name photo").sort("-createdAt")
     .then(posts => {
         res.status(200).json({posts})
     }).catch(err => {

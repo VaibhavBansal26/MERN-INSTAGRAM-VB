@@ -13,6 +13,8 @@ import Footer from './components/Footer';
 import {reducer,initialState} from './reducer/useReducer'
 import UserProfile from './components/UserProfile';
 import SubscribedUserPost from './components/SubscribedUserPost';
+import Reset from './components/Reset';
+import NewPassword from './components/NewPassword';
 //CONTEXT API
 
 //1.Creation of Data layer
@@ -30,7 +32,8 @@ const Routing = () => {
     if(user){
       dispatch({type:"SET_USER",payload:user});
     }else{
-      history.push('/login');
+      if(!history.location.pathname.startsWith('/reset'))
+        history.push('/login');
     }
   },[]);
 
@@ -40,6 +43,8 @@ const Routing = () => {
     <Route path="/signup" component={Signup}/>
     <Route path="/createPost" component={Post}/>
     <Route path="/subscribedPost" component={SubscribedUserPost}/>
+    <Route path="/reset/:token" component={NewPassword}/>
+    <Route path="/reset" component={Reset}/>
     <Route path="/profile/:userId" component={UserProfile}/>
     <Route path="/profile" component={Profile1}/>
     <Route path="/" component={HomeScreen}/>

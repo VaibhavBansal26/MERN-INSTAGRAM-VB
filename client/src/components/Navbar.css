@@ -48,6 +48,22 @@ a{
     font-size: 24px !important;
 }
 
+.collection > li {
+    width:100% !important;
+}
+
+.col-item{
+    display: flex;
+    align-items: center;
+    width: 100% !important;
+}
+
+.col-item > span {
+    margin:0px 4px;
+    padding: 3px;
+    cursor: pointer;
+}
+
 
 
 
