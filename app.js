@@ -1,6 +1,7 @@
 const express = require('express');
 const app = express()  // Invoking express
 const mongoose = require('mongoose');
+const cors = require('cors')
 
 //CONFIG FILE
 const {MONGO_URI} = require('./config/keys') //Config file
@@ -19,7 +20,7 @@ mongoose.connect(MONGO_URI,{
 const User = require('./models/userModel');
 const Post = require('./models/postModel');
 // require('./models/userModel')
-
+app.use(cors())
 //Middleware to Parse the incoming requests
 app.use(express.json());
 

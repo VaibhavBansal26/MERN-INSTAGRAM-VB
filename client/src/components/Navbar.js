@@ -47,7 +47,7 @@ const Navbar = () => {
 
     const fetchUsers = (query) => {
         setSearch(query)
-        fetch('/search-users',{
+        fetch('https://mern-instagram-vb.onrender.com/search-users',{
             method:"post",
             headers:{
                 "Content-Type":"application/json"

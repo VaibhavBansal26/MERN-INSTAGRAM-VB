@@ -12,7 +12,7 @@ const Post = () => {
 
     useEffect(() => {
         if(url){
-            fetch("/createpost",{
+            fetch("https://mern-instagram-vb.onrender.com/createpost",{
                 method:"post",
                 headers:{
                     "Content-Type":"application/json",

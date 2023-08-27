@@ -14,7 +14,7 @@ const NewPassword = () => {
 
     const submitData = () => {
        
-        fetch("/new-password",{
+        fetch("https://mern-instagram-vb.onrender.com/new-password",{
             method:"post",
             headers:{
                 "Content-Type":"application/json",

@@ -14,7 +14,7 @@ const Profile1 = () => {
     const [url,setUrl] = useState(undefined);
 
     useEffect(() =>{
-        fetch('/mypost',{
+        fetch('https://mern-instagram-vb.onrender.com/mypost',{
             headers:{
                 "Authorization":"Bearer "+localStorage.getItem("jwt")
             }
@@ -48,7 +48,7 @@ const Profile1 = () => {
                     type:"UPDATE__PHOTO",
                     payload:data.url
                 });
-                fetch('/updatePhoto',{
+                fetch('https://mern-instagram-vb.onrender.com/updatePhoto',{
                     method:"put",
                     headers:{
                         "Content-TyPE":"application/json",

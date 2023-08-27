@@ -8,7 +8,7 @@ const SubscribedUserPost = () => {
     const [aclick,setAclick] = useState(false);
     const {state,dispatch} = useContext(UserContext);
     useEffect(() =>{
-        fetch('/getsubpost',{
+        fetch('https://mern-instagram-vb.onrender.com/getsubpost',{
             headers:{
                 Authorization:"Bearer "+localStorage.getItem("jwt")
             }
@@ -21,7 +21,7 @@ const SubscribedUserPost = () => {
 
     const likePost = (id) =>{
         console.log("Unliked",id)
-        fetch('/like',{
+        fetch('https://mern-instagram-vb.onrender.com/like',{
             method:"put",
             headers:{
                 "Content-Type":"application/json",
@@ -48,7 +48,7 @@ const SubscribedUserPost = () => {
     }
     const unlikePost = (id) =>{
         console.log("Unliked",id);
-        fetch('/unlike',{
+        fetch('https://mern-instagram-vb.onrender.com/unlike',{
             method:"put",
             headers:{
                 "Content-Type":"application/json",
@@ -75,7 +75,7 @@ const SubscribedUserPost = () => {
     }
 
     const makeComment = (text,postId) => {
-        fetch('/comment',{
+        fetch('https://mern-instagram-vb.onrender.com/comment',{
             method:"put",
             headers:{
                 "Content-Type":"application/json",
@@ -105,7 +105,7 @@ const SubscribedUserPost = () => {
 
 
     const deletePost = (postId) =>{
-        fetch(`/deletePost/${postId}`,{
+        fetch(`https://mern-instagram-vb.onrender.com/deletePost/${postId}`,{
             method:"delete",
             headers:{
                 "Authorization":"Bearer "+localStorage.getItem("jwt")
@@ -125,7 +125,7 @@ const SubscribedUserPost = () => {
         console.log(commentId);
         //const p = JSON.stringify(postId);
         //const q =JSON.stringify(commentId);
-        fetch(`/deleteComment/${postId}/${commentId}`,{
+        fetch(`https://mern-instagram-vb.onrender.com/deleteComment/${postId}/${commentId}`,{
             method:"delete",
             headers:{
                 "Authorization":"Bearer "+localStorage.getItem("jwt")

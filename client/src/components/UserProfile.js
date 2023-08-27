@@ -11,7 +11,7 @@ const UserProfile = () => {
 
     useEffect(() =>{
         console.log(userId);
-        fetch(`/profile/${userId}`,{
+        fetch(`https://mern-instagram-vb.onrender.com/profile/${userId}`,{
             headers:{
                 "Authorization":"Bearer "+localStorage.getItem("jwt")
             }
@@ -25,7 +25,7 @@ const UserProfile = () => {
     //console.log(userId);
 
     const followUser = () => {
-        fetch('/follow',{
+        fetch('https://mern-instagram-vb.onrender.com/follow',{
             method:"put",
             headers:{
                 "Content-Type":"application/json",
@@ -61,7 +61,7 @@ const UserProfile = () => {
     }
 
     const unfollowUser = () => {
-        fetch('/unfollow',{
+        fetch('https://mern-instagram-vb.onrender.com/unfollow',{
             method:"put",
             headers:{
                 "Content-Type":"application/json",

@@ -14,7 +14,7 @@ const Login = () => {
         if(!/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(email)){
             return M.toast({html:"invalid email",classes:"#c62828 red darken-3"});
         }
-        fetch("/signin",{
+        fetch("https://mern-instagram-vb.onrender.com/signin",{
             method:"post",
             headers:{
                 "Content-Type":"application/json",
